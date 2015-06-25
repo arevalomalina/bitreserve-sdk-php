@@ -269,9 +269,9 @@ class User extends BaseModel implements UserInterface
     /**
      * {@inheritdoc}
      */
-    public function getTransactions()
+    public function getTransactions($limit = 50)
     {
-        $pager = new Paginator($this->client, '/me/transactions');
+        $pager = new Paginator($this->client, '/me/transactions', limit = $limit);
         $pager->setModel('Bitreserve\Model\Transaction');
 
         return $pager;
