@@ -29,7 +29,7 @@ class User extends BaseModel implements UserInterface
      *
      * @var string
      */
-    protected $fistName;
+    protected $firstName;
 
     /**
      * Last name.
